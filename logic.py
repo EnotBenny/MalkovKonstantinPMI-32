@@ -58,7 +58,7 @@ def copy_matrix(matrix: Matrix) -> Matrix:
 def _format_value(value: float) -> str:
     """Отформатировать число"""
     if value.is_integer():
-        return f"{value:>10}"
+        return f"{value:>10}".rstrip("0").rstrip(".")
     text = f"{value:.6f}".rstrip("0").rstrip(".")
     return f"{text:>10}"
 
